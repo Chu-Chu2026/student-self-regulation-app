@@ -161,7 +161,7 @@ export function GoalSetting() {
             Start My Journey
           </Button>
           <button
-            onClick={() => navigate('/')}
+            onClick={handleStartJourney}
             className="w-full text-center text-muted-foreground text-sm hover:text-foreground"
           >
             Create Another Goal Later

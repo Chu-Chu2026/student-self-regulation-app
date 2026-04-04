@@ -4,6 +4,8 @@ import { OnboardingLayout } from './layouts/OnboardingLayout';
 import { ValueProposition } from './screens/onboarding/ValueProposition';
 import { ProfileSetup } from './screens/onboarding/ProfileSetup';
 import { GoalSetting } from './screens/onboarding/GoalSetting';
+import { SignIn } from './screens/auth/SignIn';
+import { SignUp } from './screens/auth/SignUp';
 import { Dashboard } from './screens/Dashboard';
 import { Tasks } from './screens/Tasks';
 import { Focus } from './screens/Focus';
@@ -12,6 +14,14 @@ import { Achievements } from './screens/Achievements';
 import { Settings } from './screens/Settings';
 
 export const router = createBrowserRouter([
+  {
+    path: '/auth',
+    Component: OnboardingLayout,
+    children: [
+      { path: 'signin', Component: SignIn },
+      { path: 'signup', Component: SignUp },
+    ],
+  },
   {
     path: '/onboarding',
     Component: OnboardingLayout,
